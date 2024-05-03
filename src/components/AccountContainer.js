@@ -1,14 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import TransactionsList from "./TransactionsList";
 import Search from "./Search";
 import AddTransactionForm from "./AddTransactionForm";
 
-function AccountContainer() {
+function AccountContainer({ transactions }) {
+  const [filteredTransactions, setFilteredTransactions] = useState(transactions);
+
+  function searchItem(query) {
+    const filteredData = transactions.filter((item) => {
+      const lowerCaseQuery = query.toLowerCase();
+      return (
+        item.description.toLowerCase().includes(lowerCaseQuery) ||
+        item.date.toLowerCase().includes(lowerCaseQuery) ||
+        item.category.toLowerCase().includes(lowerCaseQuery) ||
+        item.amount.toString().includes(lowerCaseQuery)
+      );
+    });
+    setFilteredTransactions(filteredData);
+  }
+
   return (
     <div>
-      <Search />
+      <Search searchItem={searchItem} />
       <AddTransactionForm />
-      <TransactionsList />
+      <TransactionsList transactions={filteredTransactions} />
     </div>
   );
 }
