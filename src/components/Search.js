@@ -1,12 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 
 function Search({ searchItem }) {
 
-  
+  const [query,setQuery] = useState("")
 
-  const handleChange = (e) => {
-    const newValue = e.target.value.toLowerCase();
-    searchItem(newValue);
+  function handleChange(e){
+   
+  const newQuery = e.target.value.toLowerCase(); 
+  setQuery(p=>newQuery); 
+  searchItem(newQuery); 
+  console.log(newQuery);
     
   };
 
@@ -14,8 +17,9 @@ function Search({ searchItem }) {
     <div className="ui large fluid icon input">
       <input
         type="text"
+        value={query}
         placeholder="Search your Recent Transactions"
-        onChange={handleChange}
+        onChange={(e)=>handleChange(e)}
       />
       <i className="circular search link icon"></i>
       

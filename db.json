@@ -83,6 +83,69 @@
       "description": "Venmo, Pay Roommate for Rent",
       "category": "Housing",
       "amount": -975
+    },
+    {
+      "amount": 1589,
+      "category": "their people",
+      "date": "2024-04-30",
+      "description": "helllo",
+      "id": 13
+    },
+    {
+      "amount": "9.06",
+      "category": "my people",
+      "date": "2024-05-01",
+      "description": "helllo",
+      "id": 14
+    },
+    {
+      "amount": "0.05",
+      "category": "my people",
+      "date": "2024-04-30",
+      "description": "helllo",
+      "id": 15
+    },
+    {
+      "amount": "100",
+      "category": "happy",
+      "date": "2024-05-02",
+      "description": "happy",
+      "id": 16
+    },
+    {
+      "amount": "1090",
+      "category": "happy",
+      "date": "2024-05-02",
+      "description": "happy",
+      "id": 17
+    },
+    {
+      "amount": "6700",
+      "category": "my people",
+      "date": "2024-05-01",
+      "description": "helllo",
+      "id": 18
+    },
+    {
+      "amount": "9000",
+      "category": "my people",
+      "date": "2024-05-02",
+      "description": "helllo",
+      "id": 19
+    },
+    {
+      "amount": "8000",
+      "category": "my people",
+      "date": "2024-05-02",
+      "description": "helllo",
+      "id": 20
+    },
+    {
+      "amount": "0.06",
+      "category": "sdv",
+      "date": "2024-05-01",
+      "description": "xfvdv",
+      "id": 21
     }
   ]
 }

@@ -1,29 +1,31 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import TransactionsList from "./TransactionsList";
 import Search from "./Search";
 import AddTransactionForm from "./AddTransactionForm";
 
 function AccountContainer({ transactions }) {
-  const [filteredTransactions, setFilteredTransactions] = useState(transactions);
+  const [filteredTransactions, setFilteredTransactions] = useState([...transactions]);
 
   function searchItem(query) {
-    const filteredData = transactions.filter((item) => {
-      const lowerCaseQuery = query.toLowerCase();
+    setFilteredTransactions(transactions.filter((item) => {
+      
       return (
-        item.description.toLowerCase().includes(lowerCaseQuery) ||
-        item.date.toLowerCase().includes(lowerCaseQuery) ||
-        item.category.toLowerCase().includes(lowerCaseQuery) ||
-        item.amount.toString().includes(lowerCaseQuery)
+        item.description.toLowerCase().includes(query) ||
+        item.date.includes(query) ||
+         item.category.toLowerCase().includes(query) ||
+         item.amount.toString().includes(query)
       );
-    });
-    setFilteredTransactions(filteredData);
+    }))
+    console.log("invoked")
   }
+
+ 
 
   return (
     <div>
       <Search searchItem={searchItem} />
-      <AddTransactionForm />
-      <TransactionsList transactions={filteredTransactions} />
+      <AddTransactionForm filteredTransactions={filteredTransactions} setFilteredTransactions={setFilteredTransactions}/>
+      <TransactionsList transactions={filteredTransactions.reverse()} />
     </div>
   );
 }
