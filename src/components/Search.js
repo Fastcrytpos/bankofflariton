@@ -1,25 +1,40 @@
-import React, {useState} from "react";
+import React from "react";
 
-function Search({ searchItem }) {
+function Search({ query, setQuery }) {
+  
 
-  const [query,setQuery] = useState("")
+  
+ console.log(query)
 
-  function handleChange(e){
-   
-  const newQuery = e.target.value.toLowerCase(); 
-  setQuery(p=>newQuery); 
-  searchItem(newQuery); 
-  console.log(newQuery);
+ 
+  // function handleChange(e){
+  //   const newQuery = e.target.value.toLowerCase(); 
+  //   setQuery(newQuery); 
     
-  };
+  //   console.log(transactions)
 
+    
+
+  //   const filteredtransactions = transactions.filter((transaction)=>          
+  //             transaction.description.toLowerCase().includes(newQuery) ||
+  //             transaction.date.includes(newQuery) ||
+  //             transaction.category.toLowerCase().includes(newQuery) ||
+  //             transaction.amount.toString().includes(newQuery))
+            
+  
+  //  filteredtransactions.length>0?setTransactions(filteredtransactions):getTransactions()
+  
+
+    
+  // console.log(filteredtransactions)
+
+  // }
   return (
     <div className="ui large fluid icon input">
       <input
         type="text"
-        value={query}
         placeholder="Search your Recent Transactions"
-        onChange={(e)=>handleChange(e)}
+        onChange={(e)=>setQuery(e.target.value)}
       />
       <i className="circular search link icon"></i>
       

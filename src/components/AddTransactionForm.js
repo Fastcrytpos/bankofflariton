@@ -1,11 +1,7 @@
 
 import React,{useState} from "react";
 import axios from "axios";
-
-
-function AddTransactionForm({setFilteredTransactions}) {
-
-
+function AddTransactionForm({getTransactions,setTransactions}) {
 const[formData,setFormData]=useState({
   amount:0,
   category:"",
@@ -21,17 +17,15 @@ function handleChange(e) {
     [name]: value 
   }));
 }
-
-
 function handleAdd(e){
   console.log(formData)
-  setFilteredTransactions(p=>([...p,formData]))
+  setTransactions(p=>([...p,formData]))
   axios
     .post("http://localhost:8001/transactions",formData)
-    .then(res=>console.log("successfully posted transaction",res.data))
+    .then(res=>console.log("successfully posted transaction",res.data),getTransactions(),e.preventDefault())
     .catch(err=>console.log("failed to post transaction",err))
 
-  e.preventDefault();
+  
 }
   return (
     <div className="ui segment">

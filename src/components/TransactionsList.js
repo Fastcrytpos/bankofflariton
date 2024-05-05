@@ -1,7 +1,7 @@
 import React from "react";
 import Transaction from "./Transaction";
 
-function TransactionsList({transactions}) {
+function TransactionsList({transactions,query}) {
 
 
   return (
@@ -21,7 +21,8 @@ function TransactionsList({transactions}) {
             <h3 className="ui center aligned header">Amount</h3>
           </th>
         </tr>
-        {transactions.map(transaction=>{return <Transaction key={transaction.id} transaction={transaction}/>})}
+        {transactions.filter((transaction)=>query.toLowerCase()===""?transaction:
+     transaction.description.toLowerCase().includes(query)).map(transaction=>{return <Transaction key={transaction.id} transaction={transaction}/>})}
       </tbody>
     </table>
   );
