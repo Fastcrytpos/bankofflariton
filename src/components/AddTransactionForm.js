@@ -12,9 +12,10 @@ const[formData,setFormData]=useState({
 
 function handleChange(e) {
   const { name, value } = e.target;
+  const parsedValue = name === "amount" ? parseFloat(value) : value;
   setFormData(prevFormData => ({
     ...prevFormData,
-    [name]: value 
+    [name]: parsedValue 
   }));
 }
 function handleAdd(e){

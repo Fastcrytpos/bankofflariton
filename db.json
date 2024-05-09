@@ -92,88 +92,39 @@
       "id": 13
     },
     {
-      "amount": "9.06",
-      "category": "my people",
-      "date": "2024-05-01",
+      "amount": 800,
+      "category": "dfvdfv",
+      "date": "2024-05-07",
       "description": "helllo",
       "id": 14
     },
     {
-      "amount": "0.05",
-      "category": "my people",
-      "date": "2024-04-30",
-      "description": "helllo",
+      "amount": 80000,
+      "category": "james",
+      "date": "2024-05-07",
+      "description": "james",
       "id": 15
     },
     {
-      "amount": "100",
-      "category": "happy",
-      "date": "2024-05-02",
-      "description": "happy",
+      "amount": 9000,
+      "category": "joy",
+      "date": "2024-05-05",
+      "description": "joy",
       "id": 16
     },
     {
-      "amount": "1090",
-      "category": "happy",
-      "date": "2024-05-02",
-      "description": "happy",
+      "amount": 50000,
+      "category": "jumpstart",
+      "date": "2024-04-30",
+      "description": "joyssss",
       "id": 17
     },
     {
-      "amount": "6700",
-      "category": "my people",
-      "date": "2024-05-01",
-      "description": "helllo",
-      "id": 18
-    },
-    {
-      "amount": "9000",
-      "category": "my people",
-      "date": "2024-05-02",
-      "description": "helllo",
-      "id": 19
-    },
-    {
-      "amount": "8000",
-      "category": "my people",
-      "date": "2024-05-02",
-      "description": "helllo",
-      "id": 20
-    },
-    {
-      "amount": "0.06",
-      "category": "sdv",
-      "date": "2024-05-01",
-      "description": "xfvdv",
-      "id": 21
-    },
-    {
-      "amount": "9090",
-      "category": "kjbhjkh",
-      "date": "2024-05-01",
-      "description": "helllo",
-      "id": 22
-    },
-    {
-      "amount": "0.04",
-      "category": "my people",
-      "date": "2024-05-01",
-      "description": "helllo",
-      "id": 23
-    },
-    {
-      "amount": "60600",
-      "category": "happy",
+      "amount": 50000,
+      "category": "jumpstart",
       "date": "2024-04-30",
-      "description": "hello",
-      "id": 24
-    },
-    {
-      "amount": "9000",
-      "category": "james",
-      "date": "2024-05-02",
-      "description": "james",
-      "id": 25
+      "description": "joyssss",
+      "id": 18
     }
   ]
 }

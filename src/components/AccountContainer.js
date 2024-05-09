@@ -16,7 +16,7 @@ function AccountContainer({ getTransactions, transactions,setTransactions }) {
     <div>
       <Search query={query} setQuery={setQuery}/>
       <AddTransactionForm transactions={transactions} setTransactions={setTransactions} getTransactions={getTransactions}/>
-      <TransactionsList transactions={transactions.reverse()} query={query} setQuery={setQuery}  />
+      <TransactionsList getTransactions={getTransactions} setTransactions={setTransactions} transactions={transactions.reverse()} query={query} setQuery={setQuery}  />
     </div>
   );
 }

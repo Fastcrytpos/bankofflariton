@@ -4,9 +4,7 @@ import axios from "axios";
 
 function App() {
   const [transactions, setTransactions] = useState([]);
-
   
-   
    function getTransactions(){ 
     axios
       .get("http://localhost:8001/transactions")
